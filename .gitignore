@@ -5,7 +5,7 @@ lib
 ._.DS_Store
 dist
 compiled
-config/index.js
+/src/config/index.js
 logs/*.log
 pids/*.pid
 coverage
