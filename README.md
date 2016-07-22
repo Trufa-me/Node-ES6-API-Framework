@@ -37,7 +37,6 @@ Open your favorite Terminal and run these commands.
 ```sh
 $ git clone ssh://git@stash.inf.weboperations.co.uk:7999/siftr/recruiter-boilerplate-api.git
 $ cd boiler-plate-api
-$ ./bin/start.sh
 ```
 
 Copy confg/index_example.js and rename to index.js. (maybe worth symlinking first)
@@ -54,6 +53,10 @@ In your terminal, run the following:
 
 ```sh
 $ ln -s /home/developer/projects/boiler-plate-api/src/config/ /etc/jobsite/boiler_plate_api/pm2.json
+```
+
+```sh
+$ ./bin/start.sh
 ```
 
 ### Development
