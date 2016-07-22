@@ -7,9 +7,8 @@ const { host, port } = config.server;
 
 routes.register(app);
 
-const servers = app.listen(config.server.port, () => {
-	const { address: host, port } = servers.address();
-	console.log(`Front-End server is running at ${host}:${port}`);
+app.listen(port, () => {
+    console.log(`Front-End server is running at ${host}:${port}`);
 });
 
 

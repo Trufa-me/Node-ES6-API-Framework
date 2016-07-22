@@ -1,18 +1,20 @@
 {
-  "apps" : [{
-    "name"               : "boilerplate-api",
-    "script"             : "./compiled/index.js",
-    "merge_logs"         : true,
-    "error_file"         : "logs/boilerplate-api-stderr.log",
-    "out_file"           : "logs/boilerplate-api-stdout.log",
-    "pid_file"           : "pids/boilerplate-api.pid",
-    "exec_mode"          : "cluster",
-    "env": {
+  "apps": [
+    {
+      "name": "boilerplate-api",
+      "script": "./compiled/index.js",
+      "merge_logs": true,
+      "error_file": "logs/boilerplate-api-stderr.log",
+      "out_file": "logs/boilerplate-api-stdout.log",
+      "pid_file": "pids/boilerplate-api.pid",
+      "exec_mode": "cluster",
+      "env": {
         "NODE_ENV": "production",
-    },
-    "instances"          : 1,
-    "max_restarts"       : 10,
-    "max_memory_restart" : "1G",
-    "log_date_format"    : "YYYY-MM-DD HH:mm Z"
-   }]
+      },
+      "instances": 1,
+      "max_restarts": 10,
+      "max_memory_restart": "1G",
+      "log_date_format": "YYYY-MM-DD HH:mm Z"
+    }
+  ]
 }

@@ -12,6 +12,7 @@ WORKDIR /opt/nodeapp
 # If these files change the cache is busted
 COPY package.json /opt/nodeapp/package.json
 
+# Install and build compiled version
 RUN npm install && npm run build
 
 RUN chown -R nodeapp:nodeapp /opt/nodeapp
