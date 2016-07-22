@@ -35,7 +35,7 @@ Boilerplate API requires [Node.js](https://nodejs.org/) v6+ to run.
 Open your favorite Terminal and run these commands.
 
 ```sh
-$ git clone ssh://git@stash.inf.weboperations.co.uk:7999/siftr/recruiter-activity-api.git
+$ git clone ssh://git@stash.inf.weboperations.co.uk:7999/siftr/recruiter-boilerplate-api.git
 $ cd boiler-plate-api
 $ ./bin/start.sh
 ```
