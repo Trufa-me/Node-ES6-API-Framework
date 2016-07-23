@@ -2,7 +2,7 @@
 if [ "$1" == 'test' ]
 then
 	npm test 
-elif  [ "$1" == 'test:coverage' ] #start the production pm2 environment and use compiled babel version
+elif  [ "$1" == 'test:coverage' ] #build test documentation
 then
 	npm run test:coverage
 elif  [ "$1" == 'start:prod' ] #start the production pm2 environment and use compiled babel version
