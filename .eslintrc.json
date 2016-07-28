@@ -1,0 +1,22 @@
+
+{
+  "parser": "babel-eslint",
+
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true,
+    "mocha": true
+  },
+
+  "extends": "airbnb/base",
+  "rules": {
+      "indent": [2, 4],
+      "comma-style": [2, "last"],
+      "max-len": [0, 80, 4],
+      "padded-blocks": [0],
+      "one-var": [0],
+      "one-var-declaration-per-line": [0],
+      "radix": [0]
+  }
+}

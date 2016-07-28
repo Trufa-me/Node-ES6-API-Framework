@@ -1,0 +1,13 @@
+node_modules
+npm-debug.log
+lib
+.DS_Store
+._.DS_Store
+dist
+compiled
+/src/config/index.js
+logs/*.log
+pids/*.pid
+coverage
+.nyc_output
+.idea
