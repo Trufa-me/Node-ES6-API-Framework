@@ -18,7 +18,7 @@ app.use(compression());
 app.use(morgan('dev'));
 
 export default {
-    create() {
-        return app;
-    },
+  create() {
+    return app;
+  },
 };
