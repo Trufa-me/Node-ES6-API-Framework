@@ -1,3 +1,3 @@
-const exampleFunction = (value) => new Promise((resolve, reject) => reject(value));
+const exampleFunction = (value) => new Promise((resolve, reject) => resolve(value));
 
 export default exampleFunction;
