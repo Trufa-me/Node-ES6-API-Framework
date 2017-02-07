@@ -6,13 +6,9 @@ RUN chown -R nodeapp:nodeapp /opt/nodeapp
 RUN npm install -g yarn
 
 COPY . /opt/nodeapp
-COPY yarn.lock /opt/nodeapp/yarn.lock
-RUN chown nodeapp:nodeapp /opt/nodeapp/yarn.lock
+RUN chown nodeapp:nodeapp /opt/nodeapp/yarn.lock /opt/nodeapp/package.json
 
 USER nodeapp
-
-# If these files change the cache is busted
-COPY package.json /opt/nodeapp/package.json
 
 WORKDIR /opt/nodeapp
 
