@@ -1,6 +1,1 @@
-{
-  "server": {
-    "host": "localhost",
-    "port": 9997
-  }
-}
+/etc/jobsite/recruiter-boilerplate-api/default.json
