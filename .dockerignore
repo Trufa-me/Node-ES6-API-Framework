@@ -1,6 +1,7 @@
 .git
 .dockerignore
 node_modules
+compiled
 logs/*.log
 pids/*.pid
 coverage/*

@@ -1,23 +1,23 @@
-FROM docker1.inf.weboperations.co.uk/node_centos7:6.0.0_26
+FROM docker1.inf.weboperations.co.uk/node_centos7:7.5.0_48
 Maintainer Recruiter candidate search
 
 USER root
-
-# If these files change the cache is busted
-COPY package.json /opt/nodeapp/package.json
-
-RUN npm install
+RUN chown -R nodeapp:nodeapp /opt/nodeapp
+RUN npm install -g yarn
 
 COPY . /opt/nodeapp
-
-WORKDIR /opt/nodeapp
-
-RUN npm run build
+RUN chown nodeapp:nodeapp /opt/nodeapp/yarn.lock /opt/nodeapp/package.json
 
 USER nodeapp
 
-EXPOSE 9999
+WORKDIR /opt/nodeapp
+
+RUN yarn install
+
+RUN npm run build
+
+EXPOSE 9997
 
 ENTRYPOINT ["./bin/start.sh"]
 
-CMD ["start:prod"]
+CMD ["start"]
