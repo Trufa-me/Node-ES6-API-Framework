@@ -2,7 +2,11 @@ import exampleFunction from '../utils/';
 
 export default {
   async asyncExample(req, res) {
-    if (!req.example) return res.status(403).send({ success: false, message: 'Example not supplied' });
+    if (!req.example) {
+      return res
+        .status(403)
+        .send({ success: false, message: 'Example not supplied' });
+    }
     const data = {
       example: req.example,
     };
@@ -21,29 +25,31 @@ export default {
   },
 
   promiseExample(req, res) {
-    if (!req.example) return res.status(403).send({ success: false, message: 'Example not supplied' });
+    if (!req.example) {
+      return res
+        .status(403)
+        .send({ success: false, message: 'Example not supplied' });
+    }
     const data = {
       example: req.example,
     };
 
     // Do something async
-    exampleFunction('do this 1').then((result) => {
-      data.exampleUtil = result;
-      return exampleFunction('then this 2');
-    })
-    .then((result) => {
-      data.exampleUtil1 = result;
-      return exampleFunction('then this 3');
-    })
-    .then((result) => {
-      data.exampleUtil2 = result;
-      return res.status(200).send({ success: true, data });
-    })
-    .catch((err) => res.status(500).send({ success: false, err }));
+    exampleFunction('do this 1')
+      .then(result => {
+        data.exampleUtil = result;
+        return exampleFunction('then this 2');
+      })
+      .then(result => {
+        data.exampleUtil1 = result;
+        return exampleFunction('then this 3');
+      })
+      .then(result => {
+        data.exampleUtil2 = result;
+        return res.status(200).send({ success: true, data });
+      })
+      .catch(err => res.status(500).send({ success: false, err }));
 
     return this;
   },
 };
-
-
-
