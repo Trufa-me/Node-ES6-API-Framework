@@ -1,5 +1,5 @@
 FROM docker1.inf.weboperations.co.uk/node_centos7:7.5.0_48
-Maintainer Standards Team (Temp Name)
+MAINTAINER Standards Team (Temp Name)
 
 USER root
 RUN chown -R nodeapp:nodeapp /opt/nodeapp
