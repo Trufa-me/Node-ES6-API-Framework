@@ -167,7 +167,7 @@ docker build .
 This will create the Boilerplate API image and pull in the necessary dependencies. Once done, run the Docker and map the port to whatever you wish on your host 4005 in this case:
 
 ```sh
-docker run -d -t -p 9999:9999 -v /etc/jobsite/boiler_plate_api:/opt/nodeapp/config -v /etc/jobsite/oracle:/etc/jobsite/oracle -v /var/lib/docker/logs/boiler_plate_api/logs:/opt/boiler_plate_api/logs --name boiler_plate_api --restart=always boiler_plate_api
+docker run -d -t -p 9999:9999  --name boiler_plate_api --restart=always boiler_plate_api
 ```
 
 Verify the deployment by navigating to your server address in your preferred browser.
