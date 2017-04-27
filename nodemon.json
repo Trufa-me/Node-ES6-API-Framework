@@ -3,5 +3,5 @@
     "watch": [
         "src"
     ],
-    "exec": "npm run babel-node -- src/index.js"
+    "exec": "yarn babel-node -- src/index.js"
 }
