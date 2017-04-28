@@ -1,5 +1,5 @@
 FROM node:6.10
-MAINTAINER Standards Team (Temp Name)
+MAINTAINER Stepstone UK
 
 USER root
 RUN mkdir /opt/nodeapp

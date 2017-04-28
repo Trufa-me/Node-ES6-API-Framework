@@ -39,7 +39,7 @@ $ git git@github.com:Trufa-me/Node-ES6-API-Framework.git
 $ cd Node-ES6-API-Framework
 ```
 
-You can move confg/example_default.js to more convenient place e.g.  /etc/jobsite/Node-ES6-API-Framework/default.json and point confg/example_default.js simlink to a new target.
+You can move confg/example_default.js to more convenient place e.g.  /etc/jobsite/Node-ES6-API-Framework/default.json and point confg/example_default.js symlink to a new target.
 
 In your terminal, run the following as below:
 
