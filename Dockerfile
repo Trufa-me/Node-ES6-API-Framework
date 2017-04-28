@@ -1,14 +1,14 @@
-FROM docker1.inf.weboperations.co.uk/node_centos7:7.5.0_48
-MAINTAINER Standards Team (Temp Name)
+FROM node:6.10
+MAINTAINER Stepstone UK
 
 USER root
-RUN chown -R nodeapp:nodeapp /opt/nodeapp
-RUN npm install -g yarn
+RUN mkdir /opt/nodeapp
+RUN chown -R node:node /opt/nodeapp
 
 COPY . /opt/nodeapp
-RUN chown nodeapp:nodeapp /opt/nodeapp/yarn.lock /opt/nodeapp/package.json
+RUN chown node:node /opt/nodeapp/yarn.lock /opt/nodeapp/package.json
 
-USER nodeapp
+USER node
 
 WORKDIR /opt/nodeapp
 
@@ -16,7 +16,7 @@ RUN yarn install
 
 RUN npm run build
 
-EXPOSE 9997
+EXPOSE 40001
 
 ENTRYPOINT ["./bin/start.sh"]
 
