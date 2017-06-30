@@ -2,7 +2,7 @@ import routes from '../routes/example';
 
 export default {
   register(app) {
-    // Prevent 404 for locating favicon
+    // Prevent 404 when locating favicon
     app.get('/favicon.ico', (req, res) => res.send(204));
     app.get('/v1/someapi/async', routes.asyncExample);
     app.get('/v1/someapi/promise', routes.promiseExample);
