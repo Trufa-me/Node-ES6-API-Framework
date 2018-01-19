@@ -1,11 +1,16 @@
-import routes from '../routes/example';
+import routes from '../routes';
+import { errorHandler, invalidEndpoint } from '../middleware';
 
 export default {
   register(app) {
     // Prevent 404 when locating favicon
     app.get('/favicon.ico', (req, res) => res.sendStatus(204));
-    app.get('/v1/someapi/async', routes.asyncExample);
-    app.get('/v1/someapi/promise', routes.promiseExample);
-    app.post('/v1/someapi/example', routes.asyncExample);
+    // All routes start with api
+    // Then split off into versions inside routes
+    app.use('/api', routes);
+    // Check for invalid endpoint
+    app.use(invalidEndpoint);
+    // Error handler - must be last to pick up errors
+    app.use(errorHandler);
   },
 };

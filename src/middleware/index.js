@@ -1,7 +1,4 @@
-export default {
-  example(req, res, next) {
-    // Example middleware to add a property to all routes
-    req.example = 'example';
-    return next();
-  },
-};
+import { example, example1 } from './examples';
+import { errorHandler, invalidEndpoint } from './error-handler';
+
+export { example, example1, errorHandler, invalidEndpoint };
