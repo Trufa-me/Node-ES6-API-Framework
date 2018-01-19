@@ -1,6 +1,9 @@
 {
   "parser": "babel-eslint",
-  "extends": "airbnb-base",
+  "extends": [
+    "airbnb-base",
+    "prettier"
+  ],
   "env": {
     "node": true,
     "mocha": true
@@ -13,7 +16,8 @@
     "import/no-extraneous-dependencies": 0,
     "global-require": 0,
     "radix": 0,
-    "no-param-reassign": 0
+    "no-param-reassign": 0,
+    "no-console": 0
   },
   "plugins": [
       "import"

@@ -1,0 +1,47 @@
+{
+  "swagger": "2.0",
+  "basePath": "/api",
+  "info": {
+    "title": "API Boilerplate - example swagger document",
+    "version": "v2"
+  },
+  "paths": {
+    "/v1/something": {
+      "get": {
+        "operationId": "listVersionsv2",
+        "summary": "Example error on V1 route",
+        "produces": [
+          "application/json"
+        ],
+        "tags": [
+          "v1"
+        ],
+        "responses": {
+          "500": {
+            "description": "500 response"
+          }
+        }
+      }
+    },
+    "/v2/something": {
+      "get": {
+        "operationId": "getVersionDetailsv2",
+        "summary": "Example success on v2 route",
+        "produces": [
+          "application/json"
+        ],
+        "tags": [
+          "v2"
+        ],
+        "responses": {
+          "200": {
+            "description": "200 response"
+          }
+        }
+      }
+    }
+  },
+  "consumes": [
+    "application/json"
+  ]
+}
