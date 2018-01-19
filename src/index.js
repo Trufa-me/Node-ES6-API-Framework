@@ -6,7 +6,6 @@ const app = server.create();
 const { host, port } = config.get('server');
 
 routes.register(app);
-console.log(app._router.stack);
 
 app.listen(port, () => {
   console.log(`✅ 😀 - Front-End server is running at http://${host}:${port}`);

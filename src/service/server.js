@@ -27,7 +27,7 @@ app.use(morgan('dev'));
 
 // If swagger is enabled then load in config etc
 if (config.get('server.swagger.enable')) {
-  app.use('/docs', swaggerSetup(app));
+  app.use('/docs', swaggerSetup());
 }
 
 export default {

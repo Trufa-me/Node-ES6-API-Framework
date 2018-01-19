@@ -1,5 +1,5 @@
-FROM node:6.10
-MAINTAINER Stepstone UK
+FROM node:8.9.0
+LABEL maintainer="Stepstone UK"
 
 USER root
 RUN mkdir /opt/nodeapp
