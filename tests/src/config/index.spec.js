@@ -1,7 +1,7 @@
 import chai from 'chai';
 import config from 'config';
 
-const expect = chai.expect;
+const { expect } = chai;
 
 describe('boilerplate api configuration', () => {
   it('should contain all the correct configuration options', () => {
