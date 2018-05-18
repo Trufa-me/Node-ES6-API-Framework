@@ -9,6 +9,7 @@
     "build": "cross-env yarn clean && yarn build:node",
     "start": "cross-env NODE_ENV=production node compiled/index.js",
     "start:dev": "cross-env NODE_ENV=development ./node_modules/nodemon/bin/nodemon.js nodemon",
+    "compile": "babel src --out-dir compiled --source-maps --watch",
     "clean": "rimraf compiled",
     "test": "./node_modules/.bin/mocha --recursive ./tests/ --compilers js:babel-core/register",
     "test:coverage": "nyc --reporter=lcov --reporter=text ./node_modules/.bin/mocha --recursive --require babel-register ./tests/",
