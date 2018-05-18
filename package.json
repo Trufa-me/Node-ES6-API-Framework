@@ -51,7 +51,7 @@
     "eslint-config-prettier": "^2.9.0",
     "express": "^4.16.2",
     "helmet": "^3.9.0",
-    "nodemon": "^1.14.11",
+    "nodemon": "^1.17.4",
     "request": "^2.83.0",
     "rimraf": "^2.6.2",
     "swagger-ui-express": "^2.0.14"

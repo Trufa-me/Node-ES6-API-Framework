@@ -1,0 +1,7 @@
+{
+    "verbose": false,
+    "watch": [
+        "compiled"
+    ],
+    "exec": "node --inspect-brk=192.168.10.10:10000 compiled/index.js"
+}

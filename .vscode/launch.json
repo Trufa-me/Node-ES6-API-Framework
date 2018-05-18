@@ -21,11 +21,16 @@
       "outFiles": [ "${workspaceRoot}/compiled/**/*.js" ]
     },
     {
-      "name": "Attache Remote App.js",
+      "name": "Launch Remote App",
       "type": "node",
+      "protocol": "inspector",
       "request": "attach",
+      "stopOnEntry": false,
       "port": 10000,
-      "address": "192.168.10.10"
-    },
+      "address": "192.168.10.10",
+      "localRoot": "${workspaceRoot}",
+      "remoteRoot": "/Users/mokrzk01/ES6-API-Framework",
+      "sourceMaps": true
+    }
   ]
 }
