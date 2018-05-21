@@ -9,6 +9,7 @@
     "build": "cross-env yarn clean && yarn build:node",
     "start": "cross-env NODE_ENV=production node compiled/index.js",
     "start:dev": "cross-env NODE_ENV=development ./node_modules/nodemon/bin/nodemon.js nodemon",
+    "compile": "babel src --out-dir compiled --source-maps --watch",
     "clean": "rimraf compiled",
     "test": "./node_modules/.bin/mocha --recursive ./tests/ --compilers js:babel-core/register",
     "test:coverage": "nyc --reporter=lcov --reporter=text ./node_modules/.bin/mocha --recursive --require babel-register ./tests/",
@@ -50,7 +51,7 @@
     "eslint-config-prettier": "^2.9.0",
     "express": "^4.16.2",
     "helmet": "^3.9.0",
-    "nodemon": "^1.14.11",
+    "nodemon": "^1.17.4",
     "request": "^2.83.0",
     "rimraf": "^2.6.2",
     "swagger-ui-express": "^2.0.14"

@@ -199,3 +199,45 @@ e.g http://localhost:40001/v1/someapi/example
    [node.js]: <http://nodejs.org>
    [express]: <http://expressjs.com>
    [nodemon]: <https://github.com/remy/nodemon/blob/master/README.md>
+
+
+## Node.JS Debugging
+
+### Local debugging
+This is pretty much simple you just need to run process that will be continuous transpile your code:
+
+ ```sh
+$ npm run compile
+```
+
+Once running you can just use Visual Studio Code -> Debugging
+
+And run **Launch App.js** launch settings.
+
+### Remote debugging
+1) Run process that will be continuous transpile your code:
+
+ ```sh
+$ npm run compile
+```
+
+ 2) Start application in debug mode listening on a desired:
+
+ ```sh
+node_modules/nodemon/bin/nodemon.js --config nodemon-debug.json
+```
+
+3) Having both commands running on remote machine
+Visual Studio Code -> Debugging
+
+Make sure **host** and **remoteRoot** are pointing to correct locations.
+
+And run **Launch Remote Ap** launch settings.
+
+Unfortunately in this mode breakpoints cannot be set correctly from VSCode and instead you need to add:
+``` javascript
+debugger;
+```
+
+In place where you want debugger to stop. From there you can step over as usual in any IDE having preview on any local variables and references.
+

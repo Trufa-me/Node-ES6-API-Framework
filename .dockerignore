@@ -1,5 +1,6 @@
 .git
 .dockerignore
+.vscode
 node_modules
 compiled
 logs/*.log
