@@ -204,13 +204,13 @@ e.g http://localhost:40001/v1/someapi/example
 ## Node.JS Debugging
 
 ### Local debugging
-This is pretty much simple you just need to run process that will be continuous transpile your code:
+First you need to run process that will be continuously transpile your code:
 
  ```sh
 $ npm run compile
 ```
 
-Once running you can just use Visual Studio Code -> Debugging
+With transpile running you can use Visual Studio Code -> Debugging
 
 And run **Launch App.js** launch settings.
 
